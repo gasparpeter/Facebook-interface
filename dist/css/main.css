@@ -1,0 +1,187 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 60px;
+  background: #1c1e21;
+  color: #fff;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.left_col {
+  -webkit-box-flex: 0.33;
+      -ms-flex: 0.33;
+          flex: 0.33;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-right: 50px;
+}
+
+.middle_col {
+  -webkit-box-flex: 0.33;
+      -ms-flex: 0.33;
+          flex: 0.33;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.right_col {
+  -webkit-box-flex: 0.33;
+      -ms-flex: 0.33;
+          flex: 0.33;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.fb_logo {
+  border-radius: 50%;
+  background-color: red;
+  margin-left: 20px;
+}
+
+.search_icon {
+  background-color: #3b3b3b;
+  margin-left: 10px;
+}
+
+.marginLeft {
+  margin-left: 10px;
+}
+
+.marginRight {
+  margin-right: 10px;
+}
+
+.account {
+  background: blue;
+  margin-left: 10px;
+}
+
+.notifications {
+  background: orange;
+}
+
+.messages {
+  background: purple;
+}
+
+.plus {
+  background: white;
+}
+
+.peti {
+  background: grey;
+  width: 70px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.home {
+  background: tomato;
+}
+
+.watch {
+  background: violet;
+}
+
+.marketplace {
+  background: steelblue;
+}
+
+.groups {
+  background: springgreen;
+}
+
+.gaming {
+  background: teal;
+}
+
+.more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: hotpink;
+  border-radius: 50%;
+  display: none;
+}
+
+@media only screen and (max-width: 1099px) {
+  .more {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .middle_col {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */
