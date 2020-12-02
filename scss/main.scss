@@ -1,10 +1,19 @@
 html{
     box-sizing: border-box;
+    height: 100%;
 }
 
 * {
   margin: 0;
   padding: 0;
+}
+
+body{
+
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    overflow-Y: scroll;
+    overflow-x: hidden;
 }
 
 // navbar section
@@ -13,11 +22,12 @@ html{
     display: flex;
     width: 100vw;
     height: 60px;
-    background:#1c1e21;
+    background: rgba(0, 0, 0, 0.8);
     color:#fff;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    border-bottom: 1px solid #404040;
 }
 
 .left_col{
@@ -34,7 +44,7 @@ html{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
   
 }
@@ -61,6 +71,12 @@ html{
 .search_icon{
     background-color: rgb(59, 59, 59);
     margin-left: 10px;
+}
+
+.second-more{
+    display: none;
+    background: hotpink;
+    border-radius: 50%;
 }
 
 .marginLeft{
@@ -109,26 +125,204 @@ html{
 }
 
 .more{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     background: hotpink;
     border-radius: 50%;
     display: none;
+    
 }
 
 @media only screen and (max-width:1099px){
     .more{
         display: block;
     }
+   
+
+// sections
+    .row{
+        height: 100%;
+    }
+
+    .col{
+        height: auto;
+    }
+
+
+
+    #left-section{
+        display: none;
+    }
+    #middle-section{
+        flex:63%;
+        max-width: 63%;
+    }
+    #right-section{
+        flex:30%;
+        max-width: 30%;
+        // margin-left:275px;
+    }
 }
 
+@media only screen and (max-width:899px){
+
+    #right-section{
+        display: none;
+    }
+
+    #middle-section{
+        flex:75%;
+        max-width: 85%;
+    }
+  
+}
+
+
+
+
 @media only screen and (max-width:700px){
+  
     .middle_col{
         display: none;
     }
-   
+    #middle-section{
+        flex:90%;
+        max-width: 90%;
+    }
+   #right-section{
+       display: none;
+   }
+   .second-more{
+    display: block;
+    }   
 }
 
 // navbar section end
+
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+}
+
+.col{
+    box-sizing: border-box;
+    padding: 5px;
+    background: cadetblue;
+    margin: 5px;
+    
+    margin-top:27px;
+}
+
+#left-section{
+    flex:27%;
+    width: 27%;
+   
+    // margin-right:275px;
+}
+#middle-section{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex:43%;
+    width: 44%;
+    flex-direction: column;
+
+    .storyes-row{
+        width: 90%;
+        height: 18%;
+        background-color: skyblue;
+        margin-bottom: 5px;
+    }
+    .newpost-row{
+        margin: 17px;
+        width: 90%;
+        height: 13%;
+        background-color: skyblue;
+
+    }
+    .rooms{
+
+        width: 90%;
+        height: 10%;
+        background-color: skyblue;
+    }
+    .post{
+        margin:17px;
+        width: 90%;
+        height: 50%;
+        background-color: skyblue;
+
+    }
+}
+#right-section{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+    flex:27%;
+    width: 27%;
+ 
+
+  
+    // margin-left:275px;
+
+    .sponsors{
+        width: 65%;
+        height: 33%;
+        background-color: skyblue;
+        margin-bottom: 5px;
+    }
+    .requests{
+        width: 65%;
+        height: 16%;
+        background-color: skyblue;
+        margin-bottom: 5px;
+    }
+    .birthdays{
+        width: 65%;
+        height: 12%;
+        background-color: skyblue;
+        margin-bottom: 5px;
+    }
+    .contacts{
+        width: 65%;
+        height: 30%;
+        background-color: skyblue;
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width:899px){
+
+    #right-section{
+        display: none;
+    }
+
+  
+}
+
+// ------------
+.column{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 80%;
+}
+.inside-col{
+    box-sizing: border-box;
+    padding: 5px;
+    background: skyblue;
+    margin: 5px;
+    // height:90%;
+    // margin-top:27px;
+}
+#top-col{
+    flex:24%;
+    width: 74%;
+}
+#bottom-col{
+    flex:24%;
+    width: 74%;
+    
+}
