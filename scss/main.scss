@@ -131,9 +131,14 @@ body{
     
 }
 
-@media only screen and (max-width:1099px){
+
+
+@media only screen and (max-width:1199px){
     .more{
         display: block;
+    }
+    .story{
+        justify-content: space-between;
     }
    
 
@@ -178,22 +183,7 @@ body{
 
 
 
-@media only screen and (max-width:700px){
-  
-    .middle_col{
-        display: none;
-    }
-    #middle-section{
-        flex:90%;
-        max-width: 90%;
-    }
-   #right-section{
-       display: none;
-   }
-   .second-more{
-    display: block;
-    }   
-}
+
 
 // navbar section end
 
@@ -211,14 +201,68 @@ body{
     background: cadetblue;
     margin: 5px;
     
-    margin-top:27px;
+    margin-top:15px;
 }
 
 #left-section{
     flex:27%;
     width: 27%;
-   
+
     // margin-right:275px;
+
+    .column{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 95%;
+
+        #top-col{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex:24%;
+            width: 84%;
+    
+            .left-menu{
+                display: flex;
+                width: 90%;
+                height: 15%;
+                background-color: red;
+                border-radius: 10px;
+            }
+        }
+
+        #bottom-col{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex:24%;
+            width: 84%;
+            min-height: 50%;
+            top:20px;
+
+            .left-groups{
+                display: flex;
+                width: 90%;
+                height: 14%;
+                background-color:blue;
+                border-radius: 10px;
+            }
+        }
+    }
+    .inside-col{
+        box-sizing: border-box;
+        padding: 5px;
+        background: skyblue;
+        margin: 5px;
+        // height:90%;
+        // margin-top:27px;
+    }
+    
+    
+        
 }
 #middle-section{
     display: flex;
@@ -227,25 +271,80 @@ body{
     flex:43%;
     width: 44%;
     flex-direction: column;
+ 
 
     .storyes-row{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         width: 90%;
-        height: 18%;
+        height: 22%;
         background-color: skyblue;
-        margin-bottom: 5px;
+        margin-bottom: 2px;
+
+        .story{
+            width: 17%;
+            height: 93%;
+            background-color: slategrey;
+            margin:2px;
+            border-radius: 15px;
+        }
+    
     }
     .newpost-row{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
         margin: 17px;
         width: 90%;
         height: 13%;
         background-color: skyblue;
 
+        .whatsOnYourMind-section{
+            width: 99%;
+            height: 50%;
+            background-color: slategrey;
+        }
+        .addphoto-section{
+            width: 99%;
+            height: 50%;
+            background-color: red;
+        }
     }
     .rooms{
-
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         width: 90%;
         height: 10%;
         background-color: skyblue;
+        
+      .create-room{
+        display: flex;
+        flex-direction: row;
+        height: 45%;
+        background-color: yellowgreen;
+        }
+
+      .room-row{
+        display: flex;
+        flex-direction: row;
+        height: 55%;
+        justify-content: space-around;
+        background-color: thistle;
+        
+
+        .room-friend{
+            width: 45px;
+            height: 45px;
+            background-color: teal;
+            border-radius: 50%;
+            align-self: center;
+        }
+      }  
+        
     }
     .post{
         margin:17px;
@@ -253,6 +352,16 @@ body{
         height: 50%;
         background-color: skyblue;
 
+    }
+    
+    @media only screen and (max-width:1299px){
+        #middle-section{
+            flex:87%;
+            width: 87%;
+        }
+        .last{
+            display: none;
+        }
     }
 }
 #right-section{
@@ -268,10 +377,22 @@ body{
     // margin-left:275px;
 
     .sponsors{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
         width: 65%;
-        height: 33%;
+        height: 36%;
         background-color: skyblue;
         margin-bottom: 5px;
+
+        .sponsor{
+            display: flex;
+            width: 100%;
+            height: 40%;
+            background-color: yellow;
+            margin:2px;
+        }
     }
     .requests{
         width: 65%;
@@ -291,7 +412,18 @@ body{
         background-color: skyblue;
         margin-bottom: 5px;
     }
+
+    @media only screen and (max-width:1559px){
+        .mid{
+            width: 100%;
+        }
+        .right-menu{
+            width: 90%;
+        }
+    }
 }
+
+
 
 @media only screen and (max-width:899px){
 
@@ -301,6 +433,8 @@ body{
 
   
 }
+
+
 
 // ------------
 .column{
@@ -325,4 +459,53 @@ body{
     flex:24%;
     width: 74%;
     
+}
+
+
+
+@media only screen and (max-width:700px){
+    .last-story{
+        display: none;
+    }
+    
+    #middle-section{
+        flex:90%;
+        max-width: 90%;
+    }
+   #right-section{
+       display: none;
+   }
+   .second-more{
+    display: block;
+    }   
+    .story{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+   .navbar{ 
+       display: flex;
+
+
+    .right_col{
+        display: flex;
+        flex-grow: 2;
+        padding-right: 20px;
+ 
+         .peti{
+          display: none;
+         }
+     }
+
+    .middle_col{
+        display: none;
+    }
+   }
+
+       
+    
+    
+
+  
 }
