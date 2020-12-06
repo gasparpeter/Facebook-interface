@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -10,6 +11,7 @@ html {
 }
 
 body {
+  font-family: 'Roboto', sans-serif;
   background: rgba(0, 0, 0, 0.9);
   height: 100%;
   overflow-Y: scroll;
@@ -22,7 +24,7 @@ body {
   display: flex;
   width: 100vw;
   height: 60px;
-  background: rgba(0, 0, 0, 0.8);
+  background: #242526;
   color: #fff;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -38,9 +40,10 @@ body {
 }
 
 .left_col {
-  -webkit-box-flex: 0.33;
-      -ms-flex: 0.33;
-          flex: 0.33;
+  -webkit-box-flex: 0.53;
+      -ms-flex: 0.53;
+          flex: 0.53;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,11 +71,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-flex: -1;
+      -ms-flex-positive: -1;
+          flex-grow: -1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 50px;
 }
 
 .right_col {
@@ -101,13 +106,43 @@ body {
 
 .fb_logo {
   border-radius: 50%;
-  background-color: red;
   margin-left: 20px;
 }
 
 .search_icon {
   background-color: #3b3b3b;
   margin-left: 10px;
+  width: 35%;
+  border-radius: 25px;
+}
+
+.search_icon img {
+  margin-left: 11px;
+  margin-top: 11px;
+  width: 18px;
+  height: 18px;
+}
+
+.mini-search_icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #007c80;
+  display: none;
+  border-radius: 50%;
+}
+
+.mini-search_icon img {
+  margin-left: 11px;
+  margin-top: 11px;
+  width: 18px;
+  height: 18px;
 }
 
 .second-more {
@@ -182,6 +217,12 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .search_icon {
+    display: none;
+  }
+  .mini-search_icon {
+    display: block;
   }
   .row {
     height: 100%;
@@ -361,7 +402,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 90%;
+  width: 91%;
   height: 22%;
   background-color: skyblue;
   margin-bottom: 2px;
@@ -396,13 +437,13 @@ body {
 }
 
 #middle-section .newpost-row .whatsOnYourMind-section {
-  width: 99%;
+  width: 100%;
   height: 50%;
   background-color: slategrey;
 }
 
 #middle-section .newpost-row .addphoto-section {
-  width: 99%;
+  width: 100%;
   height: 50%;
   background-color: red;
 }
@@ -525,7 +566,77 @@ body {
   width: 100%;
   height: 40%;
   background-color: yellow;
-  margin: 2px;
+  margin: 5px;
+}
+
+#right-section .sponsors .sponsor .sponsor1 {
+  min-width: 120px;
+  height: 120px;
+  background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/0d/9b/0d/25/zato.jpg");
+  background-size: cover;
+  border-radius: 10px;
+}
+
+#right-section .sponsors .sponsor .sponsor-text1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+  height: 120px;
+  background-color: grey;
+}
+
+#right-section .sponsors .sponsor .sponsor-text1 h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#right-section .sponsors .sponsor .sponsor-text1 h4 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+#right-section .sponsors .sponsor .sponsor2 {
+  min-width: 120px;
+  height: 120px;
+  background-image: url("https://scontent.ftsr1-2.fna.fbcdn.net/v/t1.0-9/129591042_3882575508429208_2152205719735641491_o.jpg?_nc_cat=103&ccb=2&_nc_sid=8bfeb9&_nc_ohc=RTBZXaHFIZsAX_L2gZ2&_nc_oc=AQnXKiL8_gQty1MNo3a8BCWsLhmE-f_c6PBVbWS-gYYeyOVpyzjY0dat0eA5hJHGDPA&_nc_ht=scontent.ftsr1-2.fna&oh=928966f63699264c77c718fc28d9e8fb&oe=5FF2E6D2");
+  background-size: cover;
+  border-radius: 10px;
+}
+
+#right-section .sponsors .sponsor .sponsor-text2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+  height: 120px;
+  background-color: grey;
+}
+
+#right-section .sponsors .sponsor .sponsor-text2 h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#right-section .sponsors .sponsor .sponsor-text2 h4 {
+  font-size: 15px;
+  font-weight: 400;
 }
 
 #right-section .requests {
@@ -535,11 +646,131 @@ body {
   margin-bottom: 5px;
 }
 
+#right-section .requests .request-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#right-section .requests .request-head h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#right-section .requests .request-head h4 {
+  font-size: 15px;
+  font-weight: 400;
+  color: blue;
+}
+
+#right-section .requests .request-foot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 10px;
+}
+
+#right-section .requests .request-foot .request-pic {
+  width: 65px;
+  height: 65px;
+  background-image: url("https://www.thesun.co.uk/wp-content/uploads/2018/06/NINTCHDBPICT000413525555.jpg");
+  background-size: cover;
+  border-radius: 50%;
+}
+
+#right-section .requests .request-foot .request-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 79%;
+  height: 100px;
+  background-color: grey;
+  margin-left: 10px;
+}
+
+#right-section .requests .request-foot .request-info h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+#right-section .requests .request-foot .request-info h4 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+#right-section .requests .request-foot .request-info .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+#right-section .requests .request-foot .request-info .buttons .btn {
+  width: 65%;
+  height: 40px;
+  background-color: skyblue;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
 #right-section .birthdays {
   width: 65%;
   height: 12%;
   background-color: skyblue;
   margin-bottom: 5px;
+}
+
+#right-section .birthdays .birthday-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 10px;
+}
+
+#right-section .birthdays .birthday-info img {
+  width: 40px;
+  height: 40px;
+}
+
+#right-section .birthdays .birthday-info h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 10px 0 0 10px;
 }
 
 #right-section .contacts {
