@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
-html{
-    box-sizing: border-box;
-    height: 100%;
+html {
+  box-sizing: border-box;
+  height: 100%;
 }
 
 * {
@@ -10,681 +10,802 @@ html{
   padding: 0;
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
-    background: rgba(0, 0, 0, 0.9);
-    height: 100%;
-    overflow-Y: scroll;
-    overflow-x: hidden;
-
-   
+body {
+  font-family: "Roboto", sans-serif;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 // navbar section
 
-.navbar{
-    display: flex;
-    width: 100vw;
-    height: 60px;
-    background:#242526;
-    color:#fff;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    border-bottom: 1px solid #404040;
+.navbar {
+  display: flex;
+  width: 100vw;
+  height: 60px;
+  background: #242526;
+  color: #fff;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid #404040;
+  position: relative;
 }
 
-.left_col{
-    flex:0.53;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    margin-right: 50px;
-
-    
+.left_col {
+  flex: 0.53;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 50px;
 }
 
-.middle_col{
-    flex:0.33;
-    display: flex;
-    flex-direction: row;
-    flex-grow: -1;
-    justify-content: space-between;
-    padding-right:50px;
-}
+.middle_col {
+  //   flex: 0.33;
+  //   flex-direction: row;
+  //   flex-grow: -1;
+  //   justify-content: space-between;
+  //   padding-right: 50px;
+  position: absolute;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  top: 30px;
+  width: 43%;
 
-.right_col{
-    flex:0.33;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-}
+  .icon {
+    width: 70px;
+    margin: 0;
+    height: 55px;
+    display: inline-block;
+    width: 20%;
+    margin-right: -4px;
+    border-radius: 15px;
 
-.icon{
-    width: 40px;
-    height: 40px;
-}
-
-.fb_logo{
-    border-radius: 50%;
-    margin-left:20px;
-}
-
-.search_icon{
-    background-color: rgb(59, 59, 59);
-    margin-left: 10px;
-    width: 35%;
-    border-radius: 25px;
-
-    img{
-        margin-left:11px;
-        margin-top:11px;
-        width: 18px;
-        height: 18px;
-
+    &:last-child {
+      display: none;
     }
-}
+  }
 
-.mini-search_icon{
+  .home{
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: rgb(0, 124, 128);
-    display: none;
-    border-radius: 50%;
-
     img{
-        margin-left:11px;
-        margin-top:11px;
-        width: 18px;
-        height: 18px;
-
+        width: 30px;
+        height: 30px;
     }
+  }
 }
 
-.second-more{
+.right_col {
+  flex: 0.45;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.fb_logo {
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.search_icon {
+  background-color: rgb(59, 59, 59);
+  margin-left: 10px;
+  width: 35%;
+  border-radius: 25px;
+
+  img {
+    margin-left: 11px;
+    margin-top: 11px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.mini-search_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(0, 124, 128);
+  display: none;
+  border-radius: 50%;
+
+  img {
+    margin-left: 11px;
+    margin-top: 11px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.second-more {
+  display: none;
+  background: hotpink;
+  border-radius: 50%;
+}
+
+.marginLeft {
+  margin-left: 10px;
+}
+
+.marginRight {
+  margin-right: 10px;
+}
+
+.account {
+  background: blue;
+  margin-left: 10px;
+}
+.notifications {
+  background: orange;
+}
+.messages {
+  background: purple;
+}
+.plus {
+  background: white;
+}
+.peti {
+  background: grey;
+  width: 70px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.home {
+  background: tomato;
+}
+.watch {
+  background: violet;
+}
+.marketplace {
+  background: steelblue;
+}
+.groups {
+  background: springgreen;
+}
+.gaming {
+  background: teal;
+}
+
+.more {
+  background: hotpink;
+  display: none;
+}
+
+@media only screen and (max-width: 1199px) {
+  .more {
+    display: block;
+  }
+  .story {
+    justify-content: space-between;
+  }
+  .search_icon {
     display: none;
-    background: hotpink;
-    border-radius: 50%;
-}
+  }
+  .mini-search_icon {
+    display: block;
+  }
 
-.marginLeft{
-    margin-left: 10px;
-}
+  // sections
+  .row {
+    height: 100%;
+  }
 
-.marginRight{
-    margin-right: 10px;
-}
+  .col {
+    height: auto;
+  }
 
-.account{
-    background: blue;
-    margin-left: 10px;
-}
-.notifications{
-    background: orange;
-}
-.messages{
-    background: purple;
-}
-.plus{
-    background: white;
-}
-.peti{
-    background: grey;
-    width: 70px;
-    height: 40px;
-    border-radius: 20px;
-}
-
-
-.home{
-    background: tomato;
-}
-.watch{
-    background: violet;
-}
-.marketplace{
-    background: steelblue;
-}
-.groups{
-    background: springgreen;
-}
-.gaming{
-    background: teal;
-}
-
-.more{
-    background: hotpink;
-    border-radius: 50%;
+  #left-section {
     display: none;
-    
+  }
+  #middle-section {
+    flex: 63%;
+    max-width: 63%;
+  }
+  #right-section {
+    flex: 30%;
+    max-width: 30%;
+    // margin-left:275px;
+  }
+
+  .middle_col {
+    transform: none;
+    left: 16%;
+    top: 3px;
+
+    .icon {
+      &:last-child {
+        display: inline-block;
+      }
+      &:nth-child(5) {
+        display: none;
+      }
+    }
+  }
 }
 
+@media only screen and (max-width: 899px) {
+  #right-section {
+    display: none;
+  }
 
-
-@media only screen and (max-width:1199px){
-    .more{
-        display: block;
-    }
-    .story{
-        justify-content: space-between;
-    }
-    .search_icon{
-        display: none;
-    }
-    .mini-search_icon{
-        display: block;
-    }
-    
-   
-
-// sections
-    .row{
-        height: 100%;
-    }
-
-    .col{
-        height: auto;
-    }
-
-
-
-    #left-section{
-        display: none;
-    }
-    #middle-section{
-        flex:63%;
-        max-width: 63%;
-    }
-    #right-section{
-        flex:30%;
-        max-width: 30%;
-        // margin-left:275px;
-    }
+  #middle-section {
+    flex: 75%;
+    max-width: 85%;
+  }
 }
-
-@media only screen and (max-width:899px){
-
-    #right-section{
-        display: none;
-    }
-
-    #middle-section{
-        flex:75%;
-        max-width: 85%;
-    }
-  
-}
-
-
-
-
-
 
 // navbar section end
 
-
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 100%;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
 }
 
-.col{
-    box-sizing: border-box;
-    padding: 5px;
-    background: cadetblue;
-    margin: 5px;
-    
-    margin-top:15px;
+.col {
+  box-sizing: border-box;
+  padding: 5px;
+  background: cadetblue;
+  margin: 5px;
+
+  margin-top: 15px;
 }
 
-#left-section{
-    flex:27%;
-    width: 27%;
+#left-section {
+  flex: 27%;
+  width: 27%;
 
-    // margin-right:275px;
+  // margin-right:275px;
 
-    .column{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        height: 95%;
-
-        #top-col{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: flex-start;
-            flex:24%;
-            width: 84%;
-    
-            .left-menu{
-                display: flex;
-                width: 90%;
-                height: 15%;
-                background-color: red;
-                border-radius: 10px;
-            }
-        }
-
-        #bottom-col{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: flex-start;
-            flex:24%;
-            width: 84%;
-            min-height: 50%;
-            top:20px;
-
-            .left-groups{
-                display: flex;
-                width: 90%;
-                height: 14%;
-                background-color:blue;
-                border-radius: 10px;
-            }
-        }
-    }
-    .inside-col{
-        box-sizing: border-box;
-        padding: 5px;
-        background: skyblue;
-        margin: 5px;
-        // height:90%;
-        // margin-top:27px;
-    }
-    
-    
-        
-}
-#middle-section{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex:43%;
-    width: 44%;
-    flex-direction: column;
- 
-
-    .storyes-row{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 91%;
-        height: 22%;
-        background-color: skyblue;
-        margin-bottom: 2px;
-
-        .story{
-            width: 17%;
-            height: 93%;
-            background-color: slategrey;
-            margin:2px;
-            border-radius: 15px;
-        }
-    
-    }
-    .newpost-row{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        margin: 17px;
-        width: 90%;
-        height: 13%;
-        background-color: skyblue;
-
-        .whatsOnYourMind-section{
-            width: 100%;
-            height: 50%;
-            background-color: slategrey;
-        }
-        .addphoto-section{
-            width: 100%;
-            height: 50%;
-            background-color: red;
-        }
-    }
-    .rooms{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        width: 90%;
-        height: 10%;
-        background-color: skyblue;
-        
-      .create-room{
-        display: flex;
-        flex-direction: row;
-        height: 45%;
-        background-color: yellowgreen;
-        }
-
-      .room-row{
-        display: flex;
-        flex-direction: row;
-        height: 55%;
-        justify-content: space-around;
-        background-color: thistle;
-        
-
-        .room-friend{
-            width: 45px;
-            height: 45px;
-            background-color: teal;
-            border-radius: 50%;
-            align-self: center;
-        }
-      }  
-        
-    }
-    .post{
-        margin:17px;
-        width: 90%;
-        height: 50%;
-        background-color: skyblue;
-
-    }
-    
-    @media only screen and (max-width:1299px){
-        #middle-section{
-            flex:87%;
-            width: 87%;
-        }
-        .last{
-            display: none;
-        }
-    }
-}
-#right-section{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    flex-direction: column;
-    flex:27%;
-    width: 27%;
- 
-
-  
-    // margin-left:275px;
-
-    .sponsors{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-start;
-        width: 65%;
-        height: 36%;
-        background-color: skyblue;
-        margin-bottom: 5px;
-
-        .sponsor{
-            display: flex;
-            width: 100%;
-            height: 40%;
-            background-color: yellow;
-            margin:5px;
-
-            .sponsor1{
-                min-width: 120px;
-                height: 120px;
-                background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/0d/9b/0d/25/zato.jpg");
-                background-size: cover;
-                border-radius: 10px;
-            }
-            .sponsor-text1{
-                display: flex;
-                flex-direction: column; 
-                justify-content: center;
-                width: 200px;
-                height: 120px;
-                background-color: grey;
-
-                h3{
-                    font-size: 17px;
-                    font-weight: 600;
-                    margin-bottom:5px
-                }
-                h4{
-                    font-size: 15px;
-                    font-weight: 400;
-                }
-            }
-
-            .sponsor2{
-                min-width: 120px;
-                height: 120px;
-                background-image: url("https://scontent.ftsr1-2.fna.fbcdn.net/v/t1.0-9/129591042_3882575508429208_2152205719735641491_o.jpg?_nc_cat=103&ccb=2&_nc_sid=8bfeb9&_nc_ohc=RTBZXaHFIZsAX_L2gZ2&_nc_oc=AQnXKiL8_gQty1MNo3a8BCWsLhmE-f_c6PBVbWS-gYYeyOVpyzjY0dat0eA5hJHGDPA&_nc_ht=scontent.ftsr1-2.fna&oh=928966f63699264c77c718fc28d9e8fb&oe=5FF2E6D2");
-                background-size:cover;
-                border-radius: 10px;
-            }
-            .sponsor-text2{
-                display: flex;
-                flex-direction: column; 
-                justify-content: center;
-                width: 200px;
-                height: 120px;
-                background-color: grey;
-
-                h3{
-                    font-size: 17px;
-                    font-weight: 600;
-                    margin-bottom:5px
-                }
-                h4{
-                    font-size: 15px;
-                    font-weight: 400;
-                }
-            }
-        }
-    }
-    .requests{
-        width: 65%;
-        height: 16%;
-        background-color: skyblue;
-        margin-bottom: 5px;
-
-        .request-head{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-
-            h3{
-                font-size: 18px;
-                font-weight: 600;
-                margin-bottom:5px
-            }
-            h4{
-                font-size: 15px;
-                font-weight: 400;
-                color:blue
-            }
-        }
-
-        .request-foot{
-            display: flex;
-            flex-direction: row;
-            margin-top:10px;
-
-            .request-pic{
-                width: 65px;
-                height: 65px;
-                background-image: url("https://www.thesun.co.uk/wp-content/uploads/2018/06/NINTCHDBPICT000413525555.jpg");
-                background-size: cover;
-                border-radius: 50%;
-            }
-            .request-info{
-                display: flex;
-                flex-direction: column; 
-                justify-content: center;
-                width: 79%;
-                height: 100px;
-                background-color: grey;
-                margin-left:10px;
-                
-
-                h3{
-                    font-size: 17px;
-                    font-weight: 600;
-                    margin-bottom:5px;
-                    margin-left:5px;
-                }
-                h4{
-                    font-size: 14px;
-                    font-weight: 400;
-                    margin-left:5px;
-                }
-                .buttons{
-                    display:flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    width:100%;
-                    
-                    .btn{
-                        width: 65%;
-                        height: 40px;
-                        background-color: skyblue;
-                        margin:5px;
-                        border-radius: 10px;
-                        border:none;
-                        outline: none;
-                    }
-                }
-            }
-        }
- 
-    }
-    .birthdays{
-        width: 65%;
-        height: 12%;
-        background-color: skyblue;
-        margin-bottom: 5px;
-
-        .birthday-info{
-            display:flex;
-            flex-direction: row;
-            margin-top:10px;
-
-            img{
-                width:40px;
-                height: 40px;
-            }
-            h3{
-                font-size: 15px;
-                font-weight: 600;
-                margin: 10px 0 0 10px;
-            }
-        }
-    }
-    .contacts{
-        width: 65%;
-        height: 30%;
-        background-color: skyblue;
-        margin-bottom: 5px;
-    }
-
-    @media only screen and (max-width:1559px){
-        .mid{
-            width: 100%;
-        }
-        .right-menu{
-            width: 90%;
-        }
-    }
-}
-
-
-
-@media only screen and (max-width:899px){
-
-    #right-section{
-        display: none;
-    }
-
-  
-}
-
-
-
-// ------------
-.column{
+  .column {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 80%;
-}
-.inside-col{
+    height: 95%;
+
+    #top-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex: 24%;
+      width: 84%;
+
+      .left-menu {
+        display: flex;
+        width: 90%;
+        height: 15%;
+        background-color: red;
+        border-radius: 10px;
+      }
+    }
+
+    #bottom-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+      flex: 24%;
+      width: 84%;
+      min-height: 50%;
+      top: 20px;
+
+      .left-groups {
+        display: flex;
+        width: 90%;
+        height: 14%;
+        background-color: blue;
+        border-radius: 10px;
+      }
+    }
+  }
+  .inside-col {
     box-sizing: border-box;
     padding: 5px;
     background: skyblue;
     margin: 5px;
     // height:90%;
     // margin-top:27px;
+  }
 }
-#top-col{
-    flex:24%;
-    width: 74%;
-}
-#bottom-col{
-    flex:24%;
-    width: 74%;
-    
-}
+#middle-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 43%;
+  width: 44%;
+  flex-direction: column;
 
+  .storyes-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 91%;
+    height: 22%;
+    background-color: skyblue;
+    margin-bottom: 2px;
 
-
-@media only screen and (max-width:700px){
-    .last-story{
-        display: none;
+    .story {
+      width: 17%;
+      height: 93%;
+      background-color: slategrey;
+      margin: 2px;
+      border-radius: 15px;
     }
-    
-    #middle-section{
-        flex:90%;
-        max-width: 90%;
+  }
+  .newpost-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 17px;
+    width: 90%;
+    height: 13%;
+    background-color: skyblue;
+
+    .whatsOnYourMind-section {
+      display: flex;
+      flex-direction: row;  
+      width: 100%;
+      height: 50%;
+      background-color: slategrey;
+
+      .newpost-pic{
+          width: 40px;
+          height: 40px;
+          background-image: url("https://scontent.ftsr1-1.fna.fbcdn.net/v/t1.0-9/123528570_1063740820732163_8098822171314566417_n.jpg?_nc_cat=100&ccb=2&_nc_sid=09cbfe&_nc_ohc=hfw9vunvg5EAX-aTIMT&_nc_ht=scontent.ftsr1-1.fna&oh=0f960162fb088d7f76635a00774b63ba&oe=5FF4C986");
+          background-size: cover;
+          border-radius: 50%;
+          margin-left:15px;
+          align-self: center;
+      }
+      .newpost-input{
+        width: 85%;
+        height: 40px;
+        align-self: center;
+        margin-left:10px;
+        border-radius: 20px;
+        outline: none;
+        border:none;
+        background-color: #626467;
+        color:#fff;
+        padding-left:10px;
+        padding-top:2px;
+      }
+      .newpost-input::placeholder{
+        color:#fff;
+        font-weight: 300;
+      }
     }
-   #right-section{
-       display: none;
-   }
-   .second-more{
-    display: block;
-    }   
-    .story{
+    .addphoto-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      height: 50%;
+      background-color: red;
+
+      .addphoto-class{
+        align-self: center;
+        width: 32%;
+        height: 80%;
+        margin:1px;
+        background-color: green;
+        border-radius: 15px;
+      }
+      #addphoto-live{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-    }
+        justify-content: center;
+        align-items: center;
 
-   .navbar{ 
-       display: flex;
-
-
-    .right_col{
+        img{
+          width: 30px;
+          height: 34px;
+        }
+        p{
+          color:#fff;
+          margin-left:10px;
+        }
+      }
+      #addphoto-photo{
         display: flex;
-        flex-grow: 2;
-        padding-right: 20px;
- 
-         .peti{
-          display: none;
-         }
-     }
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
 
-    .middle_col{
-        display: none;
+        img{
+          width: 30px;
+          height: 30px;
+        }
+        p{
+          color:#fff;
+          margin-left:10px;
+        }
+      }
     }
-   }
+    #addphoto-feeling{
+      display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
 
-       
-    
-    
+        img{
+          width: 30px;
+          height: 30px;
+        }
+        p{
+          color:#fff;
+          margin-left:10px;
+        }
+    }
+  }
+  .rooms {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 10%;
+    background-color: skyblue;
 
+    .create-room {
+      display: flex;
+      flex-direction: row;
+      height: 45%;
+      background-color: yellowgreen;
+      justify-content: space-between;
 
+      .room-start{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        img{
+          width:25px;
+          height: 25px;
+          margin: 0px 10px;
+        }
+        h3{
+          margin-right: 10px;
+        }
+        .info{
+          width: 15px;
+          height:15px;
+        }
+      }
+      .room-end{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 10px;
+        
+        p{
+          color:blue;
+        }
+      }
+    }
+
+    .room-row {
+      display: flex;
+      flex-direction: row;
+      height: 55%;
+      justify-content: space-around;
+      background-color: thistle;
+
+      .room-friend {
+        width: 45px;
+        height: 45px;
+        background-color: teal;
+        border-radius: 50%;
+        align-self: center;
+      }
+    }
+  }
+  .post {
+    margin: 17px;
+    width: 90%;
+    // height: 50%;
+    background-color: skyblue;
+  }
+
+  .single-post {
+    height: 500px;
+    background-color: red;
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  @media only screen and (max-width: 1299px) {
+    #middle-section {
+      flex: 87%;
+      width: 87%;
+    }
+    .last {
+      display: none;
+    }
+  }
+}
+#right-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: column;
+  flex: 27%;
+  width: 27%;
+
+  // margin-left:275px;
+
+  .sponsors {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 65%;
+    height: 36%;
+    background-color: skyblue;
+    margin-bottom: 5px;
+
+    .sponsor {
+      display: flex;
+      width: 100%;
+      height: 40%;
+      background-color: yellow;
+      margin: 5px;
+
+      .sponsor1 {
+        min-width: 120px;
+        height: 120px;
+        background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/0d/9b/0d/25/zato.jpg");
+        background-size: cover;
+        border-radius: 10px;
+      }
+      .sponsor-text1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 200px;
+        height: 120px;
+        background-color: grey;
+
+        h3 {
+          font-size: 17px;
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+        h4 {
+          font-size: 15px;
+          font-weight: 400;
+        }
+      }
+
+      .sponsor2 {
+        min-width: 120px;
+        height: 120px;
+        background-image: url("https://scontent.ftsr1-2.fna.fbcdn.net/v/t1.0-9/129591042_3882575508429208_2152205719735641491_o.jpg?_nc_cat=103&ccb=2&_nc_sid=8bfeb9&_nc_ohc=RTBZXaHFIZsAX_L2gZ2&_nc_oc=AQnXKiL8_gQty1MNo3a8BCWsLhmE-f_c6PBVbWS-gYYeyOVpyzjY0dat0eA5hJHGDPA&_nc_ht=scontent.ftsr1-2.fna&oh=928966f63699264c77c718fc28d9e8fb&oe=5FF2E6D2");
+        background-size: cover;
+        border-radius: 10px;
+      }
+      .sponsor-text2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 200px;
+        height: 120px;
+        background-color: grey;
+
+        h3 {
+          font-size: 17px;
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+        h4 {
+          font-size: 15px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .requests {
+    width: 65%;
+    height: 16%;
+    background-color: skyblue;
+    margin-bottom: 5px;
+
+    .request-head {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      h3 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+      h4 {
+        font-size: 15px;
+        font-weight: 400;
+        color: blue;
+      }
+    }
+
+    .request-foot {
+      display: flex;
+      flex-direction: row;
+      margin-top: 10px;
+
+      .request-pic {
+        width: 65px;
+        height: 65px;
+        background-image: url("https://www.thesun.co.uk/wp-content/uploads/2018/06/NINTCHDBPICT000413525555.jpg");
+        background-size: cover;
+        border-radius: 50%;
+      }
+      .request-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 79%;
+        height: 100px;
+        background-color: grey;
+        margin-left: 10px;
+
+        h3 {
+          font-size: 17px;
+          font-weight: 600;
+          margin-bottom: 5px;
+          margin-left: 5px;
+        }
+        h4 {
+          font-size: 14px;
+          font-weight: 400;
+          margin-left: 5px;
+        }
+        .buttons {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          width: 100%;
+
+          .btn {
+            width: 65%;
+            height: 40px;
+            background-color: skyblue;
+            margin: 5px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+  .birthdays {
+    width: 65%;
+    height: 12%;
+    background-color: skyblue;
+    margin-bottom: 5px;
+
+    .birthday-info {
+      display: flex;
+      flex-direction: row;
+      margin-top: 10px;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+      h3 {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 10px 0 0 10px;
+      }
+    }
+  }
+  .contacts {
+    width: 65%;
+    height: 30%;
+    background-color: skyblue;
+    margin-bottom: 5px;
+  }
+
+  @media only screen and (max-width: 1559px) {
+    .mid {
+      width: 100%;
+    }
+    .right-menu {
+      width: 90%;
+    }
+  }
+}
+
+@media only screen and (max-width: 899px) {
+  #right-section {
+    display: none;
+  }
+}
+
+// ------------
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 80%;
+}
+.inside-col {
+  box-sizing: border-box;
+  padding: 5px;
+  background: skyblue;
+  margin: 5px;
+  // height:90%;
+  // margin-top:27px;
+}
+#top-col {
+  flex: 24%;
+  width: 74%;
+}
+#bottom-col {
+  flex: 24%;
+  width: 74%;
+}
+
+@media only screen and (max-width: 700px) {
+  .last-story {
+    display: none;
+  }
+
+  #middle-section {
+    flex: 90%;
+    max-width: 90%;
+  }
+  #right-section {
+    display: none;
+  }
+  .second-more {
+    display: block;
+  }
+  .story {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar {
+    display: flex;
+
+    .right_col {
+      display: flex;
+      flex-grow: 2;
+      padding-right: 20px;
+
+      .peti {
+        display: none;
+      }
+    }
+
+    .middle_col {
+      display: none;
+    }
+  }
 }
 
